@@ -29,8 +29,20 @@ public class UnitConversion {
         } while (incorrectDest);
 
         System.out.print("Enter a value: ");
-        int value = in.nextInt();
+        float value = in.nextFloat();
         in.nextLine();
+
+        double answer = 0;
+        if (destination.equals("INCHES")) {
+            answer = inchesInM * value;
+            System.out.printf("\nThere are %,.1f inches in %.1f miles.", answer, value);
+        } else if (destination.equals("FEET")) {
+            answer = feetInM * value;
+            System.out.printf("\nThere are %,.1f feet in %.1f miles.", answer, value);
+        } else if (destination.equals("YARDS")) {
+            answer = yardsInM * value;
+            System.out.printf("\nThere are %,.1f yards in %.1f miles.", answer, value);
+        }
         
         in.close();
     }
