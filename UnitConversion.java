@@ -6,9 +6,9 @@ public class UnitConversion {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         
-        final int inchesInM = 63360;
-        final int feetInM = 5280;
-        final int yardsInM = 1760;
+        final int INCHES_TO_MILES = 63360;
+        final int FEET_TO_MILES = 5280;
+        final int YARDS_TO_MILES = 1760;
 
         String origin = "";
         String destination = "";
@@ -34,13 +34,13 @@ public class UnitConversion {
 
         double answer = 0;
         if (destination.equals("INCHES")) {
-            answer = inchesInM * value;
+            answer = INCHES_TO_MILES * value;
             System.out.printf("\nThere are %,.1f inches in %.1f miles.", answer, value);
         } else if (destination.equals("FEET")) {
-            answer = feetInM * value;
+            answer = FEET_TO_MILES * value;
             System.out.printf("\nThere are %,.1f feet in %.1f miles.", answer, value);
         } else if (destination.equals("YARDS")) {
-            answer = yardsInM * value;
+            answer = YARDS_TO_MILES * value;
             System.out.printf("\nThere are %,.1f yards in %.1f miles.", answer, value);
         }
         
